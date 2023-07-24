@@ -6,14 +6,14 @@
 
 ${AS_LOCAL_HOST:=true}
 
-: "${TEST_NETWORK_HOME:=/home/elvys/go/src/github.com/elvyssoares/fabric-samples/test-network}"
+: "${TEST_NETWORK_HOME:=/root/fabric-samples/test-network}"
 : "${CONNECTION_PROFILE_FILE_ORG1:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org1.example.com/connection-org1.json}"
 : "${CERTIFICATE_FILE_ORG1:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem}"
-: "${PRIVATE_KEY_FILE_ORG1:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/0bf1e45ca86e239484b126c38a64e68c82eb5134ef5f5b56c442d353af59a474_sk}"
+: "${PRIVATE_KEY_FILE_ORG1:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/cb3047f67405766b851532b48c812862e686c1e98543a9a5502929594592c44a_sk}"
 
 : "${CONNECTION_PROFILE_FILE_ORG2:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org2.example.com/connection-org2.json}"
 : "${CERTIFICATE_FILE_ORG2:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/signcerts/cert.pem}"
-: "${PRIVATE_KEY_FILE_ORG2:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/keystore/c8c372da4dcf5e6d08309d23856d79afe813c1638af927305b045103abee20e0_sk}"
+: "${PRIVATE_KEY_FILE_ORG2:=${TEST_NETWORK_HOME}/organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/keystore/1dd63490055c8284016eabf237b7c95aa3b7106ca638b5290b1755e9a5590d80_sk}"
 
 
 cat << ENV_END > .env

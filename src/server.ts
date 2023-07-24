@@ -50,7 +50,8 @@ export const createServer = async (): Promise<Application> => {
   app.use(passport.initialize());
 
   if (process.env.NODE_ENV === 'development') {
-    app.use(cors());
+ 	logger.info('Running on development mode');
+	app.use(cors());
   }
 
   if (process.env.NODE_ENV === 'test') {
@@ -60,7 +61,7 @@ export const createServer = async (): Promise<Application> => {
   if (process.env.NODE_ENV === 'production') {
     app.use(helmet());
   }
-
+  //logger.info(process.env.NODE_ENV)		
   app.use('/', healthRouter);
   app.use('/api/assets', authenticateApiKey, assetsRouter);
   app.use('/api/jobs', authenticateApiKey, jobsRouter);

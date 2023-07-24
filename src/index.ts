@@ -73,7 +73,8 @@ async function main() {
 
   logger.info('Starting REST server');
   app.listen(config.port, () => {
-    logger.info('REST server started on port: %d', config.port);
+    	logger.info('Rest server started on mode: %s', process.env.NODE_ENV);
+	logger.info('REST server started on port: %d', config.port);
   });
 }
 
